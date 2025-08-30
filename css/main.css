@@ -1,0 +1,31 @@
+:root{
+  --primary:#008979;--accent:#00ffa4;--dark:#13263a;--muted:#3f546a;--bg:#f8fbff;
+}
+*{box-sizing:border-box} body{margin:0;font-family:Inter,system-ui,Segoe UI,Arial,sans-serif;color:var(--dark);background:#fff}
+.container{max-width:1120px;margin:0 auto;padding:0 20px}
+header{position:sticky;top:0;background:#fffcc;backdrop-filter:blur(8px);border-bottom:1px solid #e6eef6}
+nav{display:flex;align-items:center;justify-content:space-between;height:64px}
+a.logo{display:flex;align-items:center;gap:.5rem;color:var(--primary);text-decoration:none;font-weight:800}
+.nav-links{display:flex;gap:1rem}
+.nav-links a{color:var(--dark);text-decoration:none;font-weight:600}
+.btn{display:inline-flex;align-items:center;gap:.5rem;padding:.7rem 1rem;border-radius:10px;border:2px solid var(--primary);text-decoration:none;font-weight:700;cursor:pointer}
+.btn-primary{background:linear-gradient(135deg,var(--primary),#1ba071);color:#fff;border:none}
+.btn-ghost{background:transparent;color:var(--primary)}
+.hero{background:linear-gradient(135deg,#13263a,#1f3247);color:#fff;padding:96px 0}
+.hero h1{font-size:clamp(28px,6vw,48px);line-height:1.1;margin:0 0 12px}
+.hero p{opacity:.9;max-width:700px}
+.split{display:grid;grid-template-columns:1.1fr .9fr;gap:28px;align-items:center}
+.card{background:#fff;border:1px solid #e6eef6;border-radius:14px;box-shadow:0 2px 8px rgba(0,0,0,.04);padding:20px}
+.features{padding:64px 0;background:var(--bg)}
+.features-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}
+.feature{background:#fff;border:1px solid #e6eef6;border-radius:14px;padding:16px}
+.pricing{padding:64px 0}
+.pricing-card{max-width:520px;margin:0 auto;border:2px solid var(--accent);border-radius:16px;padding:28px;box-shadow:0 6px 20px rgba(0,0,0,.06)}
+footer{background:#1f3247;color:#fff;padding:36px 0;margin-top:48px}
+footer a{color:#cfe8ff;text-decoration:none}
+.grid-2{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+.mt-2{margin-top:12px}.mt-3{margin-top:20px}.mt-4{margin-top:28px}
+input[type="file"]{display:block}
+.center{text-align:center}
+.hidden{display:none}
+@media(max-width:860px){.split{grid-template-columns:1fr}}

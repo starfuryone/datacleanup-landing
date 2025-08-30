@@ -1,0 +1,27 @@
+<!DOCTYPE html><html lang="en"><head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Upload — DataCleanup Pro</title>
+  <link rel="stylesheet" href="css/main.css"><link rel="stylesheet" href="css/components.css">
+</head><body>
+  <header><div class="container"><nav>
+    <a class="logo" href="/"><span>🧼</span>DataCleanup Pro</a>
+    <div class="nav-links">
+      <a href="index.html#features">Features</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="upload.html">Upload</a>
+    </div>
+  </nav></div></header>
+
+  <main class="container" style="padding:48px 0">
+    <h1>Upload your file</h1>
+    <p>Select a CSV or Excel (.xlsx) file and we’ll return a cleaned CSV.</p>
+    <input id="fileInput" type="file" accept=".csv,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet">
+    <button class="btn btn-primary mt-3" onclick="uploadSelectedFile()">Upload & Clean</button>
+    <p id="result" class="mt-3"></p>
+    <p class="mt-3">Tip: after purchase, your browser stores a short-lived <em>job token</em> used to authorize uploads.</p>
+  </main>
+
+  <footer><div class="container">© 2025 DataCleanup Pro</div></footer>
+  <script src="js/config.js"></script>
+  <script src="js/upload.js"></script>
+</body></html>

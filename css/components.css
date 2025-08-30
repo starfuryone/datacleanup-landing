@@ -1,0 +1,6 @@
+/* Minimal component extras */
+.badge{display:inline-block;background:var(--accent);color:#13263a;border-radius:999px;padding:4px 10px;font-weight:800;font-size:.85rem}
+.check{color:#1ba071;font-weight:900;margin-right:.35rem}
+table{width:100%;border-collapse:collapse;font-size:.95rem}
+th,td{border:1px solid #e6eef6;padding:8px;text-align:left}
+thead{background:#f3f8ff}
