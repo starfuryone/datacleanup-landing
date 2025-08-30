@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DataCleanup - Clean Your Spreadsheets</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>DataCleanup</h1>
+    <p>Upload messy CSVs. Get back clean, usable data instantly.</p>
+  </header>
+
+  <main>
+    <form id="uploadForm">
+      <label for="fileInput">Choose a CSV file:</label>
+      <input type="file" id="fileInput" accept=".csv" required />
+      <button type="submit">Upload & Clean</button>
+    </form>
+
+    <div id="status"></div>
+    <div id="downloadLink"></div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 DataCleanup. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
