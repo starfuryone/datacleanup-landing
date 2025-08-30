@@ -1,59 +1,38 @@
-document.getElementById("uploadForm").addEventListener("submit", async (e) => {
-  e.preventDefault();
-  const fileInput = document.getElementById("fileInput");
-  if (!fileInput.files.length) return;
+const API_BASE =
+  location.hostname === 'localhost'
+    ? 'http://localhost:8000'
+    : 'https://api.datacleanup.pro';
 
+document.getElementById("uploadBtn").addEventListener("click", async () => {
+  const fileInput = document.getElementById("fileInput");
+  const status = document.getElementById("status");
+  const download = document.getElementById("download");
+
+  if (!fileInput.files.length) {
+    status.innerText = "Please select a file.";
+    return;
+  }
   const file = fileInput.files[0];
-  document.getElementById("status").innerText = "Requesting upload URL...";
+  status.innerText = "Uploading...";
 
   try {
-    // Step 1: Ask API for pre-signed upload URL
-    const initRes = await fetch("https://api.datacleanup.pro/v1/clean:init", {
+    const form = new FormData();
+    form.append("file", file);
+
+    const res = await fetch(`${API_BASE}/v1/clean`, {
       method: "POST",
-      headers: { "Content-Type": "application/json" },
-    });
-    const initData = await initRes.json();
-    const uploadUrl = initData.upload_url;
-    const jobId = initData.job_id;
-    const keyIn = initData.key_in;
-
-    document.getElementById("status").innerText = "Uploading file...";
-
-    // Step 2: Upload file directly to Spaces/S3
-    await fetch(uploadUrl, {
-      method: "PUT",
-      headers: { "Content-Type": "text/csv" },
-      body: file,
+      body: form
     });
 
-    // Step 3: Enqueue cleaning job
-    const enqueueRes = await fetch("https://api.datacleanup.pro/v1/clean:enqueue", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ job_id: jobId, key_in: keyIn }),
-    });
-    const enqueueData = await enqueueRes.json();
-    const keyOut = enqueueData.key_out;
+    if (!res.ok) throw new Error("Upload failed");
 
-    document.getElementById("status").innerText = "Processing... please wait";
+    const blob = await res.blob();
+    const url = URL.createObjectURL(blob);
 
-    // Step 4: Poll job status until complete
-    let downloadUrl = null;
-    while (!downloadUrl) {
-      const statusRes = await fetch(`https://api.datacleanup.pro/v1/jobs/${jobId}?key_out=${keyOut}`);
-      const statusData = await statusRes.json();
-      if (statusData.status === "done") {
-        downloadUrl = statusData.download_url;
-        break;
-      }
-      await new Promise((r) => setTimeout(r, 3000)); // wait 3s before retry
-    }
-
-    document.getElementById("status").innerText = "Done!";
-    document.getElementById("downloadLink").innerHTML =
-      `<a href="${downloadUrl}" target="_blank" class="btn">Download cleaned CSV</a>`;
+    download.innerHTML = `<a href="${url}" download="cleaned_${file.name}">Download cleaned file</a>`;
+    status.innerText = "Done!";
   } catch (err) {
     console.error(err);
-    document.getElementById("status").innerText = "Error: " + err.message;
+    status.innerText = "Error: " + err.message;
   }
 });
