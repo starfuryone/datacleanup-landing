@@ -24,3 +24,4 @@ Static landing site + upload UI. Designed to run on GitHub Pages and talk to a s
 - No secrets in frontend code.
 - Backend must enforce CORS to allowed origins.
 - Use short‑lived job tokens for uploads.
+# datacleanuproB
