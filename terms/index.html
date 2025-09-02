@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Agreement - DataCleanup Pro</title>
+    <meta name="description" content="DataCleanup Pro Customer Agreement - The terms and conditions that govern your access to and use of our services.">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary: #008979;
+            --dark-blue: #13263a;
+            --medium-blue: #1f3247;
+            --text-muted: #859bb2;
+            --bg-light: #e5effb;
+            --white: #ffffff;
+            --font-primary: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            --spacing-sm: 0.5rem;
+            --spacing-md: 1rem;
+            --spacing-lg: 1.5rem;
+            --spacing-xl: 2rem;
+            --spacing-2xl: 3rem;
+            --spacing-3xl: 4rem;
+            --radius-md: 8px;
+            --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: var(--font-primary);
+            line-height: 1.6;
+            color: var(--medium-blue);
+            background: var(--white);
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 var(--spacing-lg);
+        }
+
+        .header {
+            position: sticky;
+            top: 0;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--bg-light);
+            z-index: 1000;
+        }
+
+        .header-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 80px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: var(--spacing-sm);
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary);
+            text-decoration: none;
+        }
+
+        .logo-icon {
+            width: 32px;
+            height: 32px;
+            background: linear-gradient(135deg, #008979 0%, #1ba071 100%);
+            border-radius: var(--radius-md);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+        }
+
+        .page-header {
+            background: linear-gradient(135deg, var(--dark-blue) 0%, var(--medium-blue) 100%);
+            color: white;
+            padding: 120px 0 var(--spacing-2xl);
+            text-align: center;
+        }
+
+        .page-header h1 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: var(--spacing-md);
+        }
+
+        .page-header p {
+            font-size: 1.125rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .content {
+            padding: var(--spacing-3xl) 0;
+        }
+
+        .legal-content {
+            background: white;
+            border-radius: 12px;
+            padding: var(--spacing-2xl);
+            box-shadow: var(--shadow-sm);
+            border: 1px solid var(--bg-light);
+        }
+
+        .last-updated {
+            background: var(--bg-light);
+            padding: var(--spacing-md);
+            border-radius: var(--radius-md);
+            margin-bottom: var(--spacing-xl);
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 0.875rem;
+        }
+
+        .entity-info {
+            background: #f8f9fa;
+            border: 1px solid #dee2e6;
+            padding: var(--spacing-lg);
+            border-radius: var(--radius-md);
+            margin-bottom: var(--spacing-xl);
+        }
+
+        .entity-info h4 {
+            color: var(--dark-blue);
+            margin-bottom: var(--spacing-sm);
+            font-size: 1rem;
+        }
+
+        .jurisdiction-warning {
+            background: #fff3cd;
+            border: 1px solid #ffeaa7;
+            color: #856404;
+            padding: var(--spacing-lg);
+            border-radius: var(--radius-md);
+            margin-bottom: var(--spacing-xl);
+        }
+
+        .jurisdiction-warning strong {
+            color: #725b00;
+        }
+
+        .highlight-box {
+            background: #e8f5e8;
+            border-left: 4px solid var(--primary);
+            padding: var(--spacing-md);
+            border-radius: var(--radius-md);
+            margin: var(--spacing-lg) 0;
+        }
+
+        .highlight-box h4 {
+            color: var(--primary);
+            font-weight: 600;
+            margin-bottom: var(--spacing-sm);
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--dark-blue);
+            margin: var(--spacing-xl) 0 var(--spacing-md) 0;
+            border-bottom: 2px solid var(--primary);
+            padding-bottom: var(--spacing-sm);
+        }
+
+        h3 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: var(--dark-blue);
+            margin: var(--spacing-lg) 0 var(--spacing-sm) 0;
+        }
+
+        h4 {
+            font-size: 1.125rem;
+            font-weight: 600;
+            color: var(--dark-blue);
+            margin: var(--spacing-md) 0 var(--spacing-sm) 0;
+        }
+
+        p {
+            margin-bottom: var(--spacing-md);
+            color: var(--text-muted);
+        }
+
+        ul, ol {
+            margin-bottom: var(--spacing-md);
+            padding-left: var(--spacing-xl);
+            color: var(--text-muted);
+        }
+
+        li {
+            margin-bottom: var(--spacing-sm);
+        }
+
+        .contact-info {
+            background: var(--bg-light);
+            padding: var(--spacing-lg);
+            border-radius: var(--radius-md);
+            margin: var(--spacing-xl) 0;
+        }
+
+        .contact-info h3 {
+            margin-top: 0;
+        }
+
+        .definitions {
+            background: #f8f9fa;
+            border: 1px solid #dee2e6;
+            padding: var(--spacing-lg);
+            border-radius: var(--radius-md);
+            margin: var(--spacing-xl) 0;
+        }
+
+        .definitions h3 {
+            margin-top: 0;
+        }
+
+        .definitions dl {
+            margin: 0;
+        }
+
+        .definitions dt {
+            font-weight: 600;
+            color: var(--dark-blue);
+            margin-top: var(--spacing-md);
+            margin-bottom: var(--spacing-sm);
+        }
+
+        .definitions dd {
+            margin-left: var(--spacing-md);
+            margin-bottom: var(--spacing-sm);
+            color: var(--text-muted);
+        }
+
+        a {
+            color: var(--primary);
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 var(--spacing-md);
+            }
+            
+            .page-header h1 {
+                font-size: 2rem;
+            }
+            
+            .legal-content {
+                padding: var(--spacing-lg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <a href="/" class="logo">
+                    <div class="logo-icon">DC</div>
+                    <span>DataCleanup Pro</span>
+                </a>
+                <nav>
+                    <a href="/" style="color: var(--text-muted); font-weight: 500;">← Back to Home</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <section class="page-header">
+        <div class="container">
+            <h1>Customer Agreement</h1>
+            <p>The terms and conditions that govern your access to and use of our services</p>
+        </div>
+    </section>
+
+    <section class="content">
+        <div class="container">
+            <div class="legal-content">
+                <div class="last-updated">
+                    <strong>Last Updated:</strong> August 01, 2025
+                    <br><a href="#" style="color: var(--primary); text-decoration: underline;">See What's Changed</a>
+                </div>
+
+                <p>This DataCleanup Pro Customer Agreement (this "Agreement") contains the terms and conditions that govern your access to and use of the Services (as defined below) and is an agreement between DataCleanup Pro, acting as agent of ChatLogic Insights LTD ("ChatLogic") (also referred to as "DataCleanup Pro," "we," "us," or "our"), and you or the entity you represent ("you" or "your"). This Agreement takes effect when you click an "I Accept" button or check box presented with these terms or, if earlier, when you use any of the Services (the "Effective Date"). You represent that you are lawfully able to enter into contracts. If you are entering into this Agreement for an entity, you represent that you have legal authority to bind that entity.</p>
+
+                <div class="entity-info">
+                    <h4>ChatLogic Insights LTD Registered Address:</h4>
+                    <p>71–75 Shelton Street, Covent Garden<br>
+                    London, WC2H 9JQ<br>
+                    United Kingdom</p>
+                </div>
+
+                <div class="jurisdiction-warning">
+                    <strong>Jurisdictional Limitation:</strong> Although ChatLogic is domiciled in the United Kingdom, the Services are not offered to residents of the United Kingdom. By using the Services, you represent and warrant that you are not domiciled in the United Kingdom.
+                </div>
+
+                <h2>1. DataCleanup Pro Responsibilities</h2>
+                
+                <h3>1.1 General</h3>
+                <p>You may access and use the Services in accordance with this Agreement. Service descriptions, availability targets, or product-specific terms ("Service Terms") may apply.</p>
+
+                <h3>1.2 Third-Party Content</h3>
+                <p>You may elect to use third-party software, services, or content ("Third-Party Content"). Such content may carry its own terms and conditions.</p>
+
+                <h3>1.3 Security</h3>
+                <p>We implement reasonable and appropriate safeguards to protect Your Content, including TLS/SSL encryption in transit, AES-256 encryption at rest, access controls, audits, and monitoring.</p>
+
+                <h3>1.4 Data Privacy; Storage and Transfer</h3>
+                <p>You consent to the storage and processing of Your Content in regions we disclose or make available. We will not access or use Your Content except (a) to provide or maintain the Services, (b) as required by law or binding governmental order, or (c) with your consent. Unless prohibited, we will give notice of required disclosures. Account Information is processed under our Privacy Policy, incorporated herein.</p>
+
+                <h3>1.5 Changes to the Services</h3>
+                <p>We may change or discontinue features. If we discontinue a material, generally available feature you are actively using, we will provide at least 12 months' prior notice, except in emergencies or legal/IP matters.</p>
+
+                <h3>1.6 Availability/Service Credits</h3>
+                <p>We may change or discontinue availability targets or service credits with 90 days' advance notice for adverse changes.</p>
+
+                <h2>2. Your Responsibilities</h2>
+
+                <h3>2.1 Accounts</h3>
+                <p>You will comply with this Agreement and all applicable laws. To access Services, you must have a DataCleanup Pro account tied to a valid email and payment method. Except as expressly permitted, only one account per email is allowed. You are responsible for activities under your account except those caused by our breach.</p>
+
+                <h3>2.2 Your Content; Acceptable Use</h3>
+                <p>You are responsible for Your Content. You will ensure Your Content and End Users' use of it complies with law, this Agreement, and our Acceptable Use Policy.</p>
+
+                <h3>2.3 Security and Backup</h3>
+                <p>You are responsible for securely configuring and using the Services, including encryption and maintaining independent backups.</p>
+
+                <h3>2.4 Credentials and Keys</h3>
+                <p>Login credentials and API keys are for internal use only. They may be disclosed to agents or subcontractors working on your behalf, who must keep them confidential.</p>
+
+                <h3>2.5 End Users</h3>
+                <p>You are responsible for End Users. If you discover a violation by an End User, you must suspend their access.</p>
+
+                <h2>3. Fees and Payment</h2>
+
+                <h3>3.1 Fees</h3>
+                <p>We calculate and bill fees monthly (or more often if necessary). Fees must be paid using a supported method (e.g., Stripe). Payments are due without setoff or deduction. Increases to fees for Services you already use require 30 days' notice. We may charge 1.5% per month (or less if law requires) on overdue balances.</p>
+
+                <h3>3.2 Taxes</h3>
+                <p>Each party is responsible for taxes it is legally obligated to pay. Fees exclude Indirect Taxes (e.g., VAT, GST, sales/use). Where applicable, we will collect such taxes. Payments must be made free of withholding unless required by law, in which case you will gross-up amounts so that we receive the full amount.</p>
+
+                <h2>4. Temporary Suspension</h2>
+                <p>We may suspend your or any End User's access immediately if:</p>
+                <ul>
+                    <li>(a) use poses a security risk, disrupts others, or could cause liability;</li>
+                    <li>(b) you are in material breach;</li>
+                    <li>(c) you fail to pay fees; or</li>
+                    <li>(d) you cease normal operations or enter insolvency.</li>
+                </ul>
+                <p>During suspension, you remain responsible for fees and will not receive service credits.</p>
+
+                <h2>5. Term; Termination</h2>
+
+                <h3>5.1 Term</h3>
+                <p>This Agreement begins on the Effective Date and continues until terminated.</p>
+
+                <h3>5.2 Termination</h3>
+                <p><strong>Convenience:</strong> You may terminate by closing your account; we may terminate with 30 days' notice.</p>
+                <p><strong>Cause:</strong> Either party may terminate for uncured material breach after 30 days' notice. We may also terminate immediately if the breach is non-remediable, third-party rights expire, or legal compliance requires it.</p>
+
+                <h3>5.3 Post-Termination</h3>
+                <p>Upon termination, your rights under this Agreement end. You remain responsible for fees. For 30 days after termination (unless we terminated for cause), you may retrieve Your Content if all amounts due are paid.</p>
+
+                <h2>6. Proprietary Rights</h2>
+
+                <h3>6.1 Your Content</h3>
+                <p>You retain ownership of Your Content. We obtain no rights other than a limited license to use it solely to provide the Services.</p>
+
+                <h3>6.2 Adequate Rights</h3>
+                <p>You warrant that you have all necessary rights to Your Content and that neither it nor its use violates law or this Agreement.</p>
+
+                <h3>6.3 License to Our Content</h3>
+                <p>We grant you a limited, revocable, non-exclusive license to use DataCleanup Pro Content in connection with the Services.</p>
+
+                <h3>6.4 Restrictions</h3>
+                <p>You will not (a) reverse engineer the Services, (b) avoid fees or quotas, or (c) resell the Services. You must not misrepresent affiliation or endorsement.</p>
+
+                <h3>6.5 Suggestions</h3>
+                <p>We may use any feedback ("Suggestions") without restriction. You assign all rights in Suggestions to us.</p>
+
+                <h2>7. Indemnification</h2>
+                <p>You will indemnify us, our affiliates, and personnel against third-party claims arising from (a) your or End Users' use of the Services, (b) violation of law or this Agreement, or (c) disputes with End Users.</p>
+                
+                <p>We will indemnify you against third-party claims alleging the Services infringe intellectual property rights, subject to limitations and provided you give timely notice and allow us to control defense.</p>
+
+                <h2>8. Disclaimers</h2>
+                <p>The Services are provided "AS IS." Except as required by law, we disclaim all warranties, including merchantability, fitness, non-infringement, and uninterrupted operation.</p>
+
+                <div class="highlight-box">
+                    <h4>Zero-Knowledge Processing:</h4>
+                    <p>Files are encrypted in transit and at rest. We cannot view your files. Files are decrypted only in secure environments for processing and are automatically deleted within 48 hours. Once deleted, files cannot be recovered. You must maintain your own backups.</p>
+                </div>
+
+                <h2>9. Limitations of Liability</h2>
+                <p>Neither party nor its affiliates will be liable for indirect, incidental, special, consequential, or exemplary damages, or for lost profits, goodwill, or value of Your Content.</p>
+                
+                <p>Our aggregate liability under this Agreement will not exceed the amounts you paid in the 12 months before the liability arose.</p>
+
+                <h2>10. Modifications</h2>
+                <p>We may modify this Agreement by posting revised terms or emailing you. Continued use of the Services constitutes acceptance of modifications.</p>
+
+                <h2>11. Miscellaneous</h2>
+
+                <h3>11.1 Assignment</h3>
+                <p>You may not assign this Agreement without our consent. We may assign in connection with a merger, acquisition, or to an affiliate.</p>
+
+                <h3>11.2 Entire Agreement</h3>
+                <p>This Agreement, together with referenced policies (Privacy Policy, Acceptable Use Policy, Service Terms), constitutes the entire agreement.</p>
+
+                <h3>11.3 Force Majeure</h3>
+                <p>Neither party is liable for delays caused by factors beyond reasonable control (e.g., natural disasters, war, government action).</p>
+
+                <h3>11.4 Governing Law</h3>
+                <p>This Agreement is governed by the laws of the State of Texas, USA, without regard to its conflicts-of-law rules. The U.N. Convention on Contracts for the International Sale of Goods does not apply.</p>
+
+                <h3>11.5 Disputes; Venue</h3>
+                <p>Any dispute arising from the Services or this Agreement will be brought exclusively in the state or federal courts of Harris County, Texas, USA. The parties consent to jurisdiction and venue there. Eligible claims may be filed in Harris County small-claims court. To the extent permitted by law, the parties waive jury trial.</p>
+
+                <h3>11.6 Trade Compliance</h3>
+                <p>Each party will comply with all applicable import, export, and sanctions laws.</p>
+
+                <h3>11.7 Independent Contractors</h3>
+                <p>We are independent contractors. Nothing creates a partnership, joint venture, or employment relationship.</p>
+
+                <h3>11.8 Language</h3>
+                <p>All communications must be in English.</p>
+
+                <h3>11.9 Confidentiality</h3>
+                <p>You may use DataCleanup Pro Confidential Information only for permitted purposes and must protect it with at least the same care as your own confidential info. No publicity without our consent.</p>
+
+                <div class="contact-info">
+                    <h3>11.10 Notice</h3>
+                    <p>We may notify you by posting on our site or emailing your registered address. You may notify us at:</p>
+                    <ul style="list-style-type: disc; margin-left: 0; padding-left: var(--spacing-lg);">
+                        <li>C/O Frederic Nicolas Desjardins</li>
+                        <li><strong>DataCleanup Pro (Agent of ChatLogic Insights LTD)</strong></li>
+                        <li>1321 Upland Dr. PMB 10673</li>
+                        <li>Houston, Texas 77043, USA</li>
+                        <li><strong>Email:</strong> <a href="mailto:legal@datacleanup.pro">legal@datacleanup.pro</a></li>
+                    </ul>
+                </div>
+
+                <h3>11.11 No Third-Party Beneficiaries</h3>
+                <p>Except as expressly provided in Section 7, no third-party beneficiaries.</p>
+
+                <h3>11.12 No Waivers</h3>
+                <p>Failure to enforce any provision is not a waiver.</p>
+
+                <h3>11.13 Severability</h3>
+                <p>If any provision is unenforceable, the remainder will remain in effect.</p>
+
+                <div class="definitions">
+                    <h2>12. Definitions</h2>
+                    
+                    <dl>
+                        <dt>Acceptable Use Policy</dt>
+                        <dd>Rules posted at: <a href="https://datacleanup.pro/aup">https://datacleanup.pro/aup</a> (or successor).</dd>
+                        
+                        <dt>Account Information</dt>
+                        <dd>Data you provide for account creation/administration.</dd>
+                        
+                        <dt>DataCleanup Pro Content</dt>
+                        <dd>APIs, SDKs, documentation, templates, and materials we provide.</dd>
+                        
+                        <dt>Your Content</dt>
+                        <dd>Files, data, and materials you or End Users submit for processing.</dd>
+                        
+                        <dt>End Users</dt>
+                        <dd>Individuals/entities you permit to access the Services.</dd>
+                        
+                        <dt>Indirect Taxes</dt>
+                        <dd>VAT, GST, sales/use, and similar taxes.</dd>
+                        
+                        <dt>Losses</dt>
+                        <dd>Damages, costs, settlements, penalties, and attorneys' fees.</dd>
+                        
+                        <dt>Services</dt>
+                        <dd>DataCleanup Pro's data cleaning services, websites, APIs, and tools.</dd>
+                        
+                        <dt>Suggestions</dt>
+                        <dd>Feedback, ideas, or enhancements you provide.</dd>
+                    </dl>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>

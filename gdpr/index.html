@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GDPR Compliance - DataCleanup Pro</title>
+    <meta name="description" content="DataCleanup Pro GDPR Compliance - How we ensure full compliance with EU General Data Protection Regulation and protect your privacy rights.">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary: #008979;
+            --primary-gradient: linear-gradient(135deg, #008979 0%, #1ba071 100%);
+            --accent: #00ffa4;
+            --dark-blue: #13263a;
+            --medium-blue: #1f3247;
+            --text-muted: #859bb2;
+            --bg-light: #e5effb;
+            --bg-lighter: #f8fbff;
+            --white: #ffffff;
+            --success: #1ba071;
+            --font-primary: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            --spacing-sm: 0.5rem;
+            --spacing-md: 1rem;
+            --spacing-lg: 1.5rem;
+            --spacing-xl: 2rem;
+            --spacing-2xl: 3rem;
+            --spacing-3xl: 4rem;
+            --radius-md: 8px;
+            --radius-lg: 12px;
+            --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+            --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: var(--font-primary);
+            line-height: 1.6;
+            color: var(--medium-blue);
+            background: var(--white);
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 var(--spacing-lg);
+        }
+
+        .header {
+            position: sticky;
+            top: 0;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--bg-light);
+            z-index: 1000;
+        }
+
+        .header-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 80px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: var(--spacing-sm);
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary);
+            text-decoration: none;
+        }
+
+        .logo-icon {
+            width: 32px;
+            height: 32px;
+            background: var(--primary-gradient);
+            border-radius: var(--radius-md);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+        }
+
+        .page-header {
+            background: linear-gradient(135deg, var(--dark-blue) 0%, var(--medium-blue) 100%);
+            color: white;
+            padding: 120px 0 var(--spacing-2xl);
+            text-align: center;
+        }
+
+        .page-header h1 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: var(--spacing-md);
+        }
+
+        .page-header p {
+            font-size: 1.125rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .content {
+            padding: var(--spacing-3xl) 0;
+        }
+
+        .gdpr-summary {
+            background: var(--bg-lighter);
+            border-radius: var(--radius-lg);
+            padding: var(--spacing-2xl);
+            margin-bottom: var(--spacing-3xl);
+            text-align: center;
+        }
+
+        .gdpr-summary h2 {
+            font-size: 1.75rem;
+            font-weight: 700;
+            color: var(--dark-blue);
+            margin-bottom: var(--spacing-md);
+        }
+
+        .rights-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: var(--spacing-xl);
+            margin: var(--spacing-2xl) 0;
+        }
+
+        .rights-card {
+            background: white;
+            border-radius: var(--radius-lg);
+            padding: var(--spacing-xl);
+            box-shadow: var(--shadow-md);
+            border-left: 4px solid var(--primary);
+        }
+
+        .rights-card h3 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: var(--dark-blue);
+            margin-bottom: var(--spacing-sm);
+        }
+
+        .rights-card p {
+            color: var(--text-muted);
+            margin-bottom: var(--spacing-md);
+        }
+
+        .rights-card ul {
+            list-style: none;
+            color: var(--text-muted);
+            padding: 0;
+        }
+
+        .rights-card li {
+            margin-bottom: var(--spacing-sm);
+            padding-left: var(--spacing-md);
+            position: relative;
+        }
+
+        .rights-card li::before {
+            content: '•';
+            position: absolute;
+            left: 0;
+            color: var(--primary);
+            font-weight: bold;
+        }
+
+        .legal-basis-section {
+            background: white;
+            border-radius: var(--radius-lg);
+            padding: var(--spacing-2xl);
+            box-shadow: var(--shadow-sm);
+            border: 1px solid var(--bg-light);
+            margin: var(--spacing-2xl) 0;
+        }
+
+        .legal-basis-section h2 {
+            font-size: 1.75rem;
+            font-weight: 700;
+            color: var(--dark-blue);
+            margin-bottom: var(--spacing-lg);
+        }
+
+        .basis-item {
+            margin-bottom: var(--spacing-lg);
+            padding: var(--spacing-lg);
+            border-left: 3px solid var(--accent);
+            background: var(--bg-lighter);
+        }
+
+        .basis-item h4 {
+            font-size: 1.125rem;
+            font-weight: 600;
+            color: var(--dark-blue);
+            margin-bottom: var(--spacing-sm);
+        }
+
+        .basis-item p {
+            color: var(--text-muted);
+        }
+
+        .contact-section {
+            background: var(--dark-blue);
+            color: white;
+            border-radius: var(--radius-lg);
+            padding: var(--spacing-2xl);
+            text-align: center;
+            margin: var(--spacing-3xl) 0;
+        }
+
+        .contact-section h2 {
+            margin-bottom: var(--spacing-md);
+        }
+
+        .contact-section p {
+            opacity: 0.9;
+            margin-bottom: var(--spacing-lg);
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: var(--spacing-md) var(--spacing-xl);
+            border-radius: var(--radius-md);
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            border: none;
+            font-size: 1rem;
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: white;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.1);
+            border-color: rgba(255, 255, 255, 0.6);
+        }
+
+        .data-processing-section {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: var(--spacing-xl);
+            margin: var(--spacing-2xl) 0;
+        }
+
+        .processing-card {
+            background: white;
+            border-radius: var(--radius-lg);
+            padding: var(--spacing-xl);
+            box-shadow: var(--shadow-sm);
+            border: 1px solid var(--bg-light);
+        }
+
+        .processing-card h3 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: var(--dark-blue);
+            margin-bottom: var(--spacing-md);
+        }
+
+        .processing-card ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .processing-card li {
+            margin-bottom: var(--spacing-sm);
+            padding-left: var(--spacing-md);
+            position: relative;
+            color: var(--text-muted);
+        }
+
+        .processing-card li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--success);
+            font-weight: bold;
+        }
+
+        .retention-table {
+            width: 100%;
+            background: white;
+            border-radius: var(--radius-lg);
+            padding: var(--spacing-xl);
+            box-shadow: var(--shadow-sm);
+            border: 1px solid var(--bg-light);
+            margin: var(--spacing-xl) 0;
+        }
+
+        .retention-table h3 {
+            margin-bottom: var(--spacing-lg);
+            color: var(--dark-blue);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            padding: var(--spacing-md);
+            text-align: left;
+            border-bottom: 1px solid var(--bg-light);
+        }
+
+        th {
+            background: var(--bg-light);
+            font-weight: 600;
+            color: var(--dark-blue);
+        }
+
+        td {
+            color: var(--text-muted);
+        }
+
+        a {
+            color: var(--primary);
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 var(--spacing-md);
+            }
+            
+            .page-header h1 {
+                font-size: 2rem;
+            }
+            
+            .rights-grid,
+            .data-processing-section {
+                grid-template-columns: 1fr;
+            }
+            
+            .retention-table {
+                overflow-x: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <a href="/" class="logo">
+                    <div class="logo-icon">DC</div>
+                    <span>DataCleanup Pro</span>
+                </a>
+                <nav>
+                    <a href="/" style="color: var(--text-muted); font-weight: 500;">← Back to Home</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <section class="page-header">
+        <div class="container">
+            <h1>GDPR Compliance</h1>
+            <p>Full compliance with EU General Data Protection Regulation and your privacy rights</p>
+        </div>
+    </section>
+
+    <section class="content">
+        <div class="container">
+            <div class="gdpr-summary">
+                <h2>Your Privacy Rights Under GDPR</h2>
+                <p>As a data processor and controller, DataCleanup Pro is fully committed to GDPR compliance. We respect your privacy rights and have implemented comprehensive measures to ensure the protection of your personal data in accordance with EU law.</p>
+            </div>
+
+            <div class="rights-grid">
+                <div class="rights-card">
+                    <h3>Right to Information</h3>
+                    <p>You have the right to know how we process your personal data.</p>
+                    <ul>
+                        <li>Clear privacy notices and policies</li>
+                        <li>Transparent data collection practices</li>
+                        <li>Information about data retention periods</li>
+                        <li>Details about third-party data sharing</li>
+                    </ul>
+                </div>
+
+                <div class="rights-card">
+                    <h3>Right of Access</h3>
+                    <p>You can request access to your personal data we hold.</p>
+                    <ul>
+                        <li>Free copy of your personal data</li>
+                        <li>Information about processing purposes</li>
+                        <li>Details about data recipients</li>
+                        <li>Source of the data (if not collected from you)</li>
+                    </ul>
+                </div>
+
+                <div class="rights-card">
+                    <h3>Right to Rectification</h3>
+                    <p>You can correct inaccurate or incomplete personal data.</p>
+                    <ul>
+                        <li>Update incorrect personal information</li>
+                        <li>Complete incomplete data records</li>
+                        <li>Notification to third parties where applicable</li>
+                        <li>Response within one month</li>
+                    </ul>
+                </div>
+
+                <div class="rights-card">
+                    <h3>Right to Erasure</h3>
+                    <p>Request deletion of your personal data ("right to be forgotten").</p>
+                    <ul>
+                        <li>Delete data when no longer necessary</li>
+                        <li>Withdraw consent for processing</li>
+                        <li>Object to unlawful processing</li>
+                        <li>Comply with legal obligations</li>
+                    </ul>
+                </div>
+
+                <div class="rights-card">
+                    <h3>Right to Restrict Processing</h3>
+                    <p>Limit how we process your personal data in certain situations.</p>
+                    <ul>
+                        <li>Contest accuracy of personal data</li>
+                        <li>Processing is unlawful</li>
+                        <li>Data needed for legal claims</li>
+                        <li>Objection to processing pending verification</li>
+                    </ul>
+                </div>
+
+                <div class="rights-card">
+                    <h3>Right to Data Portability</h3>
+                    <p>Receive your personal data in a machine-readable format.</p>
+                    <ul>
+                        <li>Structured, commonly used format</li>
+                        <li>Transfer to another controller</li>
+                        <li>Automated processing based on consent</li>
+                        <li>No adverse effect on others' rights</li>
+                    </ul>
+                </div>
+
+                <div class="rights-card">
+                    <h3>Right to Object</h3>
+                    <p>Object to processing based on legitimate interests or direct marketing.</p>
+                    <ul>
+                        <li>Stop direct marketing communications</li>
+                        <li>Object to automated decision-making</li>
+                        <li>Challenge legitimate interest processing</li>
+                        <li>Opt-out of profiling activities</li>
+                    </ul>
+                </div>
+
+                <div class="rights-card">
+                    <h3>Rights Related to Automated Decision Making</h3>
+                    <p>Protection from automated decisions with significant effects.</p>
+                    <ul>
+                        <li>Human intervention in decision processes</li>
+                        <li>Express your point of view</li>
+                        <li>Contest automated decisions</li>
+                        <li>Request manual review</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="legal-basis-section">
+                <h2>Legal Basis for Processing</h2>
+                <p>We process your personal data based on the following legal grounds under GDPR:</p>
+
+                <div class="basis-item">
+                    <h4>Article 6(1)(b) - Contract</h4>
+                    <p>Processing necessary for the performance of our Terms of Service contract, including providing data cleaning services, managing your account, and processing payments.</p>
+                </div>
+
+                <div class="basis-item">
+                    <h4>Article 6(1)(a) - Consent</h4>
+                    <p>With your explicit consent for marketing communications, newsletter subscriptions, and optional data processing features like AI categorization.</p>
+                </div>
+
+                <div class="basis-item">
+                    <h4>Article 6(1)(f) - Legitimate Interest</h4>
+                    <p>For our legitimate interests in improving our services, preventing fraud, ensuring security, and conducting business analytics, balanced against your privacy rights.</p>
+                </div>
+
+                <div class="basis-item">
+                    <h4>Article 6(1)(c) - Legal Obligation</h4>
+                    <p>To comply with legal requirements such as tax regulations, anti-money laundering laws, and court orders.</p>
+                </div>
+            </div>
+
+            <div class="data-processing-section">
+                <div class="processing-card">
+                    <h3>Data Protection Measures</h3>
+                    <ul>
+                        <li>End-to-end encryption (TLS/SSL and AES-256)</li>
+                        <li>Access controls and authentication</li>
+                        <li>Regular security audits and assessments</li>
+                        <li>Staff training on data protection</li>
+                        <li>Data breach notification procedures</li>
+                        <li>Privacy by design and by default</li>
+                    </ul>
+                </div>
+
+                <div class="processing-card">
+                    <h3>International Data Transfers</h3>
+                    <ul>
+                        <li>Standard Contractual Clauses (SCCs)</li>
+                        <li>Adequacy decisions where applicable</li>
+                        <li>Additional safeguards for non-EEA transfers</li>
+                        <li>Regular assessment of transfer mechanisms</li>
+                        <li>Documentation of all data transfers</li>
+                        <li>Impact assessments for high-risk transfers</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="retention-table">
+                <h3>Data Retention Periods</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Data Type</th>
+                            <th>Retention Period</th>
+                            <th>Legal Basis</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Uploaded Data Files</td>
+                            <td>48 hours maximum</td>
+                            <td>Contract performance</td>
+                        </tr>
+                        <tr>
+                            <td>Account Information</td>
+                            <td>While account is active + 3 years</td>
+                            <td>Contract performance</td>
+                        </tr>
+                        <tr>
+                            <td>Payment Records</td>
+                            <td>7 years</td>
+                            <td>Legal obligation (tax law)</td>
+                        </tr>
+                        <tr>
+                            <td>Marketing Data</td>
+                            <td>Until consent is withdrawn</td>
+                            <td>Consent</td>
+                        </tr>
+                        <tr>
+                            <td>Support Communications</td>
+                            <td>3 years</td>
+                            <td>Legitimate interest</td>
+                        </tr>
+                        <tr>
+                            <td>Security Logs</td>
+                            <td>1 year</td>
+                            <td>Legitimate interest</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="processing-card" style="grid-column: 1 / -1;">
+                <h3>Data Breach Procedures</h3>
+                <p>In accordance with GDPR Article 33 and 34, we have established comprehensive data breach procedures:</p>
+                <ul>
+                    <li>Immediate incident response and containment within 1 hour</li>
+                    <li>Risk assessment and impact evaluation within 24 hours</li>
+                    <li>Notification to supervisory authority within 72 hours</li>
+                    <li>Individual notification without undue delay if high risk</li>
+                    <li>Detailed breach documentation and lessons learned</li>
+                    <li>Regular testing of incident response procedures</li>
+                </ul>
+            </div>
+
+            <div class="contact-section">
+                <h2>Exercise Your Rights</h2>
+                <p>To exercise any of your GDPR rights or if you have questions about our data processing practices, please contact our Data Protection Officer.</p>
+                <div style="display: flex; gap: var(--spacing-md); justify-content: center; flex-wrap: wrap;">
+                    <a href="mailto:dpo@datacleanup.pro" class="btn btn-secondary">Contact DPO</a>
+                    <a href="/privacy" class="btn btn-secondary">Privacy Policy</a>
+                </div>
+            </div>
+
+            <div class="processing-card" style="margin-top: var(--spacing-2xl);">
+                <h3>Supervisory Authority</h3>
+                <p>If you are not satisfied with our response to your privacy concerns, you have the right to lodge a complaint with your local supervisory authority. For EU residents, you can find your local authority at:</p>
+                <p><a href="https://edpb.europa.eu/about-edpb/about-edpb/members_en" target="_blank">European Data Protection Board - Member Authorities</a></p>
+            </div>
+
+            <div class="processing-card">
+                <h3>Regular Updates</h3>
+                <p>We regularly review and update our GDPR compliance measures to ensure they remain current with evolving regulations and best practices. This page was last updated on January 15, 2025.</p>
+                <ul>
+                    <li>Annual compliance audits by external experts</li>
+                    <li>Regular staff training on GDPR requirements</li>
+                    <li>Continuous monitoring of regulatory changes</li>
+                    <li>Updates to privacy policies and procedures</li>
+                    <li>Investment in privacy-enhancing technologies</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

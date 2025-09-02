@@ -1,0 +1,787 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Careers - DataCleanup Pro | Join Our Team</title>
+    <meta name="description" content="Join DataCleanup Pro's mission to help businesses transform messy data into actionable insights. Explore career opportunities in data engineering, AI, and business operations.">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            /* Colors */
+            --primary: #008979;
+            --primary-light: #1ba071;
+            --primary-gradient: linear-gradient(135deg, #008979 0%, #1ba071 100%);
+            --accent: #00ffa4;
+            --accent-gradient: linear-gradient(135deg, #00ffa4 0%, #01d489 100%);
+            
+            /* Neutral Colors */
+            --dark-blue: #13263a;
+            --medium-blue: #1f3247;
+            --light-blue: #3f546a;
+            --text-muted: #859bb2;
+            --bg-light: #e5effb;
+            --bg-lighter: #f8fbff;
+            --white: #ffffff;
+            
+            /* Typography */
+            --font-primary: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            
+            /* Spacing */
+            --spacing-xs: 0.25rem;
+            --spacing-sm: 0.5rem;
+            --spacing-md: 1rem;
+            --spacing-lg: 1.5rem;
+            --spacing-xl: 2rem;
+            --spacing-2xl: 3rem;
+            --spacing-3xl: 4rem;
+            
+            /* Borders */
+            --radius-sm: 4px;
+            --radius-md: 8px;
+            --radius-lg: 12px;
+            --radius-xl: 16px;
+            --radius-full: 9999px;
+            
+            /* Shadows */
+            --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+            --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: var(--font-primary);
+            line-height: 1.6;
+            color: var(--medium-blue);
+            background: var(--white);
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 var(--spacing-lg);
+        }
+
+        /* Header */
+        .header {
+            position: sticky;
+            top: 0;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--bg-light);
+            z-index: 1000;
+        }
+
+        .header-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 80px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: var(--spacing-sm);
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary);
+            text-decoration: none;
+        }
+
+        .logo-icon {
+            width: 32px;
+            height: 32px;
+            background: var(--primary-gradient);
+            border-radius: var(--radius-md);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: var(--spacing-lg);
+            list-style: none;
+        }
+
+        .nav-link {
+            color: var(--medium-blue);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .nav-link:hover {
+            color: var(--primary);
+        }
+
+        .nav-link.active {
+            color: var(--primary);
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: var(--spacing-sm) var(--spacing-lg);
+            border-radius: var(--radius-md);
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            border: none;
+            font-size: 1rem;
+        }
+
+        .btn-primary {
+            background: var(--primary-gradient);
+            color: white;
+            box-shadow: var(--shadow-md);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--primary);
+            border: 2px solid var(--primary);
+        }
+
+        .btn-secondary:hover {
+            background: var(--primary);
+            color: white;
+        }
+
+        /* Page Header */
+        .page-header {
+            background: linear-gradient(135deg, var(--dark-blue) 0%, var(--medium-blue) 100%);
+            color: white;
+            padding: 120px 0 var(--spacing-3xl);
+            text-align: center;
+        }
+
+        .page-header h1 {
+            font-size: 3rem;
+            font-weight: 800;
+            margin-bottom: var(--spacing-md);
+        }
+
+        .page-header p {
+            font-size: 1.25rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto var(--spacing-lg);
+        }
+
+        .stats-row {
+            display: flex;
+            justify-content: center;
+            gap: var(--spacing-3xl);
+            margin-top: var(--spacing-xl);
+        }
+
+        .stat {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--accent);
+            display: block;
+        }
+
+        .stat-label {
+            font-size: 0.875rem;
+            opacity: 0.8;
+        }
+
+        /* Values Section */
+        .values-section {
+            padding: var(--spacing-3xl) 0;
+        }
+
+        .values-section h2 {
+            text-align: center;
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--dark-blue);
+            margin-bottom: var(--spacing-lg);
+        }
+
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: var(--spacing-xl);
+            margin: var(--spacing-2xl) 0;
+        }
+
+        .value-card {
+            background: white;
+            border-radius: var(--radius-lg);
+            padding: var(--spacing-xl);
+            box-shadow: var(--shadow-md);
+            border: 1px solid var(--bg-light);
+            text-align: center;
+        }
+
+        .value-icon {
+            width: 60px;
+            height: 60px;
+            border-radius: var(--radius-lg);
+            background: var(--accent-gradient);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto var(--spacing-lg);
+            font-size: 1.5rem;
+        }
+
+        .value-card h3 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: var(--dark-blue);
+            margin-bottom: var(--spacing-sm);
+        }
+
+        .value-card p {
+            color: var(--text-muted);
+            line-height: 1.6;
+        }
+
+        /* Open Positions */
+        .positions-section {
+            background: var(--bg-lighter);
+            padding: var(--spacing-3xl) 0;
+        }
+
+        .positions-section h2 {
+            text-align: center;
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--dark-blue);
+            margin-bottom: var(--spacing-2xl);
+        }
+
+        .position-card {
+            background: white;
+            border-radius: var(--radius-lg);
+            padding: var(--spacing-xl);
+            margin-bottom: var(--spacing-lg);
+            box-shadow: var(--shadow-md);
+            border: 1px solid var(--bg-light);
+        }
+
+        .position-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: var(--spacing-lg);
+        }
+
+        .position-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--dark-blue);
+            margin-bottom: var(--spacing-xs);
+        }
+
+        .position-meta {
+            display: flex;
+            gap: var(--spacing-md);
+            font-size: 0.875rem;
+            color: var(--text-muted);
+        }
+
+        .position-meta span {
+            background: var(--bg-light);
+            padding: var(--spacing-xs) var(--spacing-sm);
+            border-radius: var(--radius-sm);
+        }
+
+        .position-description {
+            color: var(--text-muted);
+            margin-bottom: var(--spacing-lg);
+            line-height: 1.6;
+        }
+
+        .position-requirements {
+            margin-bottom: var(--spacing-lg);
+        }
+
+        .position-requirements h4 {
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--dark-blue);
+            margin-bottom: var(--spacing-sm);
+        }
+
+        .requirements-list {
+            list-style: none;
+            color: var(--text-muted);
+        }
+
+        .requirements-list li {
+            margin-bottom: var(--spacing-xs);
+            padding-left: var(--spacing-md);
+            position: relative;
+        }
+
+        .requirements-list li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--primary);
+            font-weight: bold;
+        }
+
+        /* No Positions */
+        .no-positions {
+            background: white;
+            border-radius: var(--radius-lg);
+            padding: var(--spacing-3xl);
+            text-align: center;
+            box-shadow: var(--shadow-md);
+        }
+
+        .no-positions h3 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--dark-blue);
+            margin-bottom: var(--spacing-md);
+        }
+
+        .no-positions p {
+            color: var(--text-muted);
+            margin-bottom: var(--spacing-lg);
+            font-size: 1.125rem;
+        }
+
+        /* Benefits Section */
+        .benefits-section {
+            padding: var(--spacing-3xl) 0;
+        }
+
+        .benefits-section h2 {
+            text-align: center;
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--dark-blue);
+            margin-bottom: var(--spacing-2xl);
+        }
+
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: var(--spacing-lg);
+        }
+
+        .benefit-item {
+            display: flex;
+            align-items: flex-start;
+            gap: var(--spacing-md);
+            padding: var(--spacing-lg);
+            background: white;
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-sm);
+        }
+
+        .benefit-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: var(--radius-md);
+            background: var(--accent-gradient);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.25rem;
+            flex-shrink: 0;
+        }
+
+        .benefit-content h4 {
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--dark-blue);
+            margin-bottom: var(--spacing-xs);
+        }
+
+        .benefit-content p {
+            color: var(--text-muted);
+            font-size: 0.875rem;
+        }
+
+        /* Application Section */
+        .application-section {
+            background: var(--dark-blue);
+            color: white;
+            padding: var(--spacing-3xl) 0;
+            text-align: center;
+        }
+
+        .application-section h2 {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: var(--spacing-md);
+        }
+
+        .application-section p {
+            font-size: 1.125rem;
+            opacity: 0.9;
+            margin-bottom: var(--spacing-xl);
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--medium-blue);
+            color: white;
+            padding: var(--spacing-2xl) 0;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: var(--spacing-xl);
+        }
+
+        .footer-brand {
+            display: flex;
+            align-items: center;
+            gap: var(--spacing-sm);
+            margin-bottom: var(--spacing-md);
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links h4 {
+            margin-bottom: var(--spacing-md);
+            color: var(--accent);
+        }
+
+        .footer-links a {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            color: var(--accent);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            margin-top: var(--spacing-xl);
+            padding-top: var(--spacing-lg);
+            text-align: center;
+            opacity: 0.6;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .page-header h1 {
+                font-size: 2rem;
+            }
+            
+            .stats-row {
+                flex-direction: column;
+                gap: var(--spacing-lg);
+            }
+            
+            .position-header {
+                flex-direction: column;
+                gap: var(--spacing-md);
+            }
+            
+            .position-meta {
+                flex-wrap: wrap;
+            }
+            
+            .values-grid,
+            .benefits-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .footer-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+            
+            .container {
+                padding: 0 var(--spacing-md);
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <a href="/" class="logo">
+                    <div class="logo-icon">DC</div>
+                    <span>DataCleanup Pro</span>
+                </a>
+                
+                <nav>
+                    <ul class="nav-links">
+                        <li><a href="/" class="nav-link">Home</a></li>
+                        <li><a href="/about" class="nav-link">About</a></li>
+                        <li><a href="/contact" class="nav-link">Contact</a></li>
+                        <li><a href="/blog" class="nav-link">Blog</a></li>
+                        <li><a href="/careers" class="nav-link active">Careers</a></li>
+                    </ul>
+                    <a href="/#pricing" class="btn btn-primary">Get Started</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Join Our Team</h1>
+            <p>Help us transform how businesses manage their data. We're building the future of AI-powered data cleaning and looking for passionate people to join our mission.</p>
+            
+            <div class="stats-row">
+                <div class="stat">
+                    <span class="stat-number">100%</span>
+                    <span class="stat-label">Remote Team</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">4.9/5</span>
+                    <span class="stat-label">Employee Rating</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">$120K+</span>
+                    <span class="stat-label">Average Salary</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Values Section -->
+    <section class="values-section">
+        <div class="container">
+            <h2>Why Work With Us</h2>
+            
+            <div class="values-grid">
+                <div class="value-card">
+                    <div class="value-icon">🚀</div>
+                    <h3>Impact at Scale</h3>
+                    <p>Your work directly helps thousands of businesses make better decisions with clean, accurate data. See the immediate impact of your contributions.</p>
+                </div>
+                
+                <div class="value-card">
+                    <div class="value-icon">🧠</div>
+                    <h3>Cutting-Edge Tech</h3>
+                    <p>Work with the latest in AI, machine learning, and data processing technologies. We invest heavily in tools and training.</p>
+                </div>
+                
+                <div class="value-card">
+                    <div class="value-icon">🌍</div>
+                    <h3>Remote-First</h3>
+                    <p>Work from anywhere in the world. We've been remote-first since day one and have perfected asynchronous collaboration.</p>
+                </div>
+                
+                <div class="value-card">
+                    <div class="value-icon">📈</div>
+                    <h3>Growth Opportunities</h3>
+                    <p>Join a fast-growing company with clear advancement paths, mentorship programs, and learning budgets for skill development.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Open Positions -->
+    <section class="positions-section">
+        <div class="container">
+            <h2>Open Positions</h2>
+            
+            <!-- Currently no open positions, but keeping structure for when there are -->
+            <div class="no-positions">
+                <h3>No Current Openings</h3>
+                <p>We're not actively hiring right now, but we're always interested in connecting with talented people who share our passion for data quality and AI innovation.</p>
+                <a href="mailto:careers@datacleanup.pro" class="btn btn-primary">Send Your Resume</a>
+            </div>
+            
+            <!-- Example position structure for when there are openings -->
+            <!--
+            <div class="position-card">
+                <div class="position-header">
+                    <div>
+                        <h3 class="position-title">Senior Backend Engineer</h3>
+                        <div class="position-meta">
+                            <span>Full-time</span>
+                            <span>Remote</span>
+                            <span>$140K - $180K</span>
+                        </div>
+                    </div>
+                    <button class="btn btn-primary">Apply Now</button>
+                </div>
+                
+                <p class="position-description">
+                    We're looking for an experienced backend engineer to help scale our data processing infrastructure and API services. You'll work on high-performance systems that process millions of data records with AI-powered accuracy.
+                </p>
+                
+                <div class="position-requirements">
+                    <h4>Requirements</h4>
+                    <ul class="requirements-list">
+                        <li>5+ years of Python development experience</li>
+                        <li>Experience with FastAPI, async programming, and databases</li>
+                        <li>Knowledge of data processing frameworks (Pandas, NumPy)</li>
+                        <li>Familiarity with cloud platforms (AWS, Docker)</li>
+                        <li>Strong understanding of API design and testing</li>
+                    </ul>
+                </div>
+            </div>
+            -->
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="benefits-section">
+        <div class="container">
+            <h2>Benefits & Perks</h2>
+            
+            <div class="benefits-grid">
+                <div class="benefit-item">
+                    <div class="benefit-icon">💰</div>
+                    <div class="benefit-content">
+                        <h4>Competitive Salary</h4>
+                        <p>Top-tier compensation with equity options and regular reviews</p>
+                    </div>
+                </div>
+                
+                <div class="benefit-item">
+                    <div class="benefit-icon">🏥</div>
+                    <div class="benefit-content">
+                        <h4>Health & Wellness</h4>
+                        <p>100% covered health, dental, and vision insurance for you and family</p>
+                    </div>
+                </div>
+                
+                <div class="benefit-item">
+                    <div class="benefit-icon">🏖️</div>
+                    <div class="benefit-content">
+                        <h4>Unlimited PTO</h4>
+                        <p>Take the time you need to recharge with our flexible vacation policy</p>
+                    </div>
+                </div>
+                
+                <div class="benefit-item">
+                    <div class="benefit-icon">🎓</div>
+                    <div class="benefit-content">
+                        <h4>Learning Budget</h4>
+                        <p>$3,000 annually for courses, conferences, and skill development</p>
+                    </div>
+                </div>
+                
+                <div class="benefit-item">
+                    <div class="benefit-icon">💻</div>
+                    <div class="benefit-content">
+                        <h4>Equipment Allowance</h4>
+                        <p>Latest MacBook Pro, monitor, and home office setup covered</p>
+                    </div>
+                </div>
+                
+                <div class="benefit-item">
+                    <div class="benefit-icon">🤝</div>
+                    <div class="benefit-content">
+                        <h4>Team Retreats</h4>
+                        <p>Annual company retreat and quarterly team building events</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Application Section -->
+    <section class="application-section">
+        <div class="container">
+            <h2>Ready to Join Us?</h2>
+            <p>Even if we don't have an open position that matches your skills right now, we'd love to hear from you. Send us your resume and tell us about your passion for data and technology.</p>
+            <div style="display: flex; gap: var(--spacing-md); justify-content: center;">
+                <a href="mailto:careers@datacleanup.pro" class="btn btn-primary">Send Resume</a>
+                <a href="/contact" class="btn btn-secondary" style="color: white; border-color: rgba(255,255,255,0.3);">Contact Us</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div>
+                    <div class="footer-brand">
+                        <div class="logo-icon">DC</div>
+                        <span style="font-weight: 600;">DataCleanup Pro</span>
+                    </div>
+                    <p>Professional data cleaning service for businesses of all sizes. Clean, organize, and categorize your spreadsheet data with AI-powered accuracy.</p>
+                </div>
+                
+                <div>
+                    <ul class="footer-links">
+                        <h4>Product</h4>
+                        <li><a href="/#features">Features</a></li>
+                        <li><a href="/#pricing">Pricing</a></li>
+                        <li><a href="/api">API Docs</a></li>
+                        <li><a href="/examples">Examples</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <ul class="footer-links">
+                        <h4>Company</h4>
+                        <li><a href="/about">About</a></li>
+                        <li><a href="/contact">Contact</a></li>
+                        <li><a href="/blog">Blog</a></li>
+                        <li><a href="/careers">Careers</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <ul class="footer-links">
+                        <h4>Legal</h4>
+                        <li><a href="/privacy">Privacy Policy</a></li>
+                        <li><a href="/terms">Terms of Service</a></li>
+                        <li><a href="/security">Security</a></li>
+                        <li><a href="/gdpr">GDPR</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 DataCleanup Pro. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

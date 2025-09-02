@@ -1,0 +1,1101 @@
+<!DOCTYPE html>
+<!-- saved from url=(0047)https://www.datacleanup.pro/examples/index.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Examples - DataCleanup Pro | Real Data Cleaning Results</title>
+    <meta name="description" content="See real examples of DataCleanup Pro&#39;s data cleaning results including before/after comparisons, sample reports, and success stories.">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com/">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+    <link href="./index_files/css2" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary: #008979;
+            --primary-light: #1ba071;
+            --primary-gradient: linear-gradient(135deg, #008979 0%, #1ba071 100%);
+            --accent: #00ffa4;
+            --accent-gradient: linear-gradient(135deg, #00ffa4 0%, #01d489 100%);
+            --dark-blue: #13263a;
+            --medium-blue: #1f3247;
+            --light-blue: #3f546a;
+            --text-muted: #859bb2;
+            --bg-light: #e5effb;
+            --bg-lighter: #f8fbff;
+            --white: #ffffff;
+            --success: #1ba071;
+            --error: #e53e3e;
+            --warning: #ff9458;
+            --font-primary: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            --font-mono: 'JetBrains Mono', 'Courier New', monospace;
+            --spacing-xs: 0.25rem;
+            --spacing-sm: 0.5rem;
+            --spacing-md: 1rem;
+            --spacing-lg: 1.5rem;
+            --spacing-xl: 2rem;
+            --spacing-2xl: 3rem;
+            --spacing-3xl: 4rem;
+            --radius-sm: 4px;
+            --radius-md: 8px;
+            --radius-lg: 12px;
+            --radius-xl: 16px;
+            --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+            --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: var(--font-primary);
+            line-height: 1.6;
+            color: var(--medium-blue);
+            background: var(--white);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 var(--spacing-lg);
+        }
+
+        /* Header */
+        .header {
+            position: sticky;
+            top: 0;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--bg-light);
+            z-index: 1000;
+        }
+
+        .header-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 80px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: var(--spacing-sm);
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary);
+            text-decoration: none;
+        }
+
+        .logo-icon {
+            width: 32px;
+            height: 32px;
+            background: var(--primary-gradient);
+            border-radius: var(--radius-md);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: var(--spacing-lg);
+            list-style: none;
+        }
+
+        .nav-link {
+            color: var(--medium-blue);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .nav-link:hover {
+            color: var(--primary);
+        }
+
+        .nav-link.active {
+            color: var(--primary);
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: var(--spacing-sm) var(--spacing-lg);
+            border-radius: var(--radius-md);
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            border: none;
+            font-size: 1rem;
+        }
+
+        .btn-primary {
+            background: var(--primary-gradient);
+            color: white;
+            box-shadow: var(--shadow-md);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        /* Page Header */
+        .page-header {
+            background: linear-gradient(135deg, var(--dark-blue) 0%, var(--medium-blue) 100%);
+            color: white;
+            padding: 120px 0 var(--spacing-3xl);
+            text-align: center;
+        }
+
+        .page-header h1 {
+            font-size: 3rem;
+            font-weight: 800;
+            margin-bottom: var(--spacing-md);
+        }
+
+        .page-header p {
+            font-size: 1.25rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Filter Tabs */
+        .filter-tabs {
+            display: flex;
+            justify-content: center;
+            gap: var(--spacing-md);
+            margin: var(--spacing-2xl) 0;
+            flex-wrap: wrap;
+        }
+
+        .filter-tab {
+            padding: var(--spacing-sm) var(--spacing-lg);
+            background: var(--bg-light);
+            border: none;
+            border-radius: var(--radius-md);
+            color: var(--text-muted);
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .filter-tab:hover,
+        .filter-tab.active {
+            background: var(--primary);
+            color: white;
+        }
+
+        /* Example Cards */
+        .examples-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: var(--spacing-xl);
+            margin: var(--spacing-2xl) 0;
+        }
+
+        .example-card {
+            background: white;
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow-lg);
+            border: 1px solid var(--bg-light);
+            transition: all 0.3s ease;
+        }
+
+        .example-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-xl);
+        }
+
+        .example-header {
+            background: var(--bg-lighter);
+            padding: var(--spacing-lg);
+            border-bottom: 1px solid var(--bg-light);
+        }
+
+        .example-title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--dark-blue);
+            margin-bottom: var(--spacing-sm);
+        }
+
+        .example-meta {
+            display: flex;
+            gap: var(--spacing-md);
+            font-size: 0.875rem;
+            color: var(--text-muted);
+        }
+
+        .example-badge {
+            background: var(--accent);
+            color: var(--dark-blue);
+            padding: var(--spacing-xs) var(--spacing-sm);
+            border-radius: var(--radius-sm);
+            font-weight: 600;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+        }
+
+        .example-content {
+            padding: var(--spacing-lg);
+        }
+
+        .example-stats {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--spacing-md);
+            margin-bottom: var(--spacing-lg);
+        }
+
+        .stat-item {
+            text-align: center;
+            background: var(--bg-light);
+            padding: var(--spacing-md);
+            border-radius: var(--radius-md);
+        }
+
+        .stat-number {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary);
+            display: block;
+        }
+
+        .stat-label {
+            font-size: 0.75rem;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        /* Before/After Tables */
+        .comparison-tables {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--spacing-md);
+            margin: var(--spacing-lg) 0;
+        }
+
+        .table-container {
+            border-radius: var(--radius-md);
+            overflow: hidden;
+            border: 1px solid var(--bg-light);
+        }
+
+        .table-header {
+            background: var(--bg-light);
+            padding: var(--spacing-sm);
+            font-weight: 600;
+            font-size: 0.875rem;
+            text-align: center;
+            color: var(--dark-blue);
+        }
+
+        .data-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.75rem;
+            font-family: var(--font-mono);
+        }
+
+        .data-table td {
+            padding: var(--spacing-xs) var(--spacing-sm);
+            border-bottom: 1px solid var(--bg-light);
+            border-right: 1px solid var(--bg-light);
+        }
+
+        .data-table td:last-child {
+            border-right: none;
+        }
+
+        .data-table .messy {
+            background: #fee;
+            color: #c53030;
+        }
+
+        .data-table .clean {
+            background: #f0fff4;
+            color: #22543d;
+        }
+
+        .data-table .duplicate {
+            background: #fff3cd;
+            color: #856404;
+            text-decoration: line-through;
+        }
+
+        /* Report Preview */
+        .report-preview {
+            background: var(--bg-lighter);
+            border-radius: var(--radius-lg);
+            padding: var(--spacing-lg);
+            margin: var(--spacing-lg) 0;
+        }
+
+        .report-preview h4 {
+            color: var(--dark-blue);
+            margin-bottom: var(--spacing-md);
+        }
+
+        .report-metrics {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            gap: var(--spacing-md);
+        }
+
+        .metric-item {
+            text-align: center;
+            background: white;
+            padding: var(--spacing-md);
+            border-radius: var(--radius-md);
+        }
+
+        .metric-value {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--primary);
+            display: block;
+        }
+
+        .metric-label {
+            font-size: 0.75rem;
+            color: var(--text-muted);
+        }
+
+        /* Case Study */
+        .case-study {
+            background: var(--bg-lighter);
+            padding: var(--spacing-3xl) 0;
+        }
+
+        .case-study-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--spacing-3xl);
+            align-items: center;
+        }
+
+        .case-study-text h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--dark-blue);
+            margin-bottom: var(--spacing-md);
+        }
+
+        .case-study-text p {
+            font-size: 1.125rem;
+            color: var(--text-muted);
+            line-height: 1.7;
+            margin-bottom: var(--spacing-lg);
+        }
+
+        .case-study-results {
+            background: white;
+            border-radius: var(--radius-lg);
+            padding: var(--spacing-xl);
+            box-shadow: var(--shadow-md);
+        }
+
+        .results-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--spacing-lg);
+        }
+
+        .result-item {
+            text-align: center;
+        }
+
+        .result-number {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--primary);
+            display: block;
+        }
+
+        .result-label {
+            color: var(--text-muted);
+            font-weight: 500;
+        }
+
+        /* Interactive Demo */
+        .interactive-demo {
+            background: var(--bg-lighter);
+            border-radius: var(--radius-lg);
+            padding: var(--spacing-xl);
+            margin: var(--spacing-2xl) 0;
+        }
+
+        .demo-controls {
+            display: flex;
+            gap: var(--spacing-md);
+            margin-bottom: var(--spacing-lg);
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .demo-btn {
+            padding: var(--spacing-sm) var(--spacing-md);
+            background: var(--primary);
+            color: white;
+            border: none;
+            border-radius: var(--radius-md);
+            cursor: pointer;
+            font-weight: 500;
+            transition: opacity 0.3s ease;
+        }
+
+        .demo-btn:hover {
+            opacity: 0.9;
+        }
+
+        .demo-btn:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            background: var(--dark-blue);
+            color: white;
+            padding: var(--spacing-3xl) 0;
+            text-align: center;
+        }
+
+        .cta-section h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: var(--spacing-md);
+        }
+
+        .cta-section p {
+            font-size: 1.125rem;
+            margin-bottom: var(--spacing-xl);
+            opacity: 0.9;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .page-header h1 {
+                font-size: 2rem;
+            }
+            
+            .examples-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .comparison-tables {
+                grid-template-columns: 1fr;
+            }
+            
+            .case-study-content {
+                grid-template-columns: 1fr;
+            }
+            
+            .container {
+                padding: 0 var(--spacing-md);
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <a href="https://www.datacleanup.pro/" class="logo">
+                    <div class="logo-icon">DC</div>
+                    <span>DataCleanup Pro</span>
+                </a>
+                
+                <nav>
+                    <ul class="nav-links">
+                        <li><a href="https://www.datacleanup.pro/" class="nav-link">Home</a></li>
+                        <li><a href="https://www.datacleanup.pro/features" class="nav-link">Features</a></li>
+                        <li><a href="https://www.datacleanup.pro/pricing" class="nav-link">Pricing</a></li>
+                        <li><a href="https://www.datacleanup.pro/examples" class="nav-link active">Examples</a></li>
+                        <li><a href="https://www.datacleanup.pro/contact" class="nav-link">Contact</a></li>
+                    </ul>
+                    <a href="https://www.datacleanup.pro/pricing" class="btn btn-primary">Get Started</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Real Data Cleaning Examples</h1>
+            <p>See actual before/after results from our AI-powered data cleaning service, including sample reports and case studies.</p>
+        </div>
+    </section>
+
+    <!-- Filter Tabs -->
+    <section class="container">
+        <div class="filter-tabs">
+            <button class="filter-tab active" onclick="filterExamples(&#39;all&#39;)">All Examples</button>
+            <button class="filter-tab" onclick="filterExamples(&#39;customer-data&#39;)">Customer Data</button>
+            <button class="filter-tab" onclick="filterExamples(&#39;leads&#39;)">Sales Leads</button>
+            <button class="filter-tab" onclick="filterExamples(&#39;inventory&#39;)">Inventory</button>
+            <button class="filter-tab" onclick="filterExamples(&#39;financial&#39;)">Financial Data</button>
+        </div>
+    </section>
+
+    <!-- Examples Grid -->
+    <section class="container">
+        <div class="examples-grid">
+            <!-- Customer Database Example -->
+            <div class="example-card" data-category="customer-data">
+                <div class="example-header">
+                    <div class="example-title">Customer Database Cleanup</div>
+                    <div class="example-meta">
+                        <span class="example-badge">Customer Data</span>
+                        <span>3,247 rows processed</span>
+                        <span>24h turnaround</span>
+                    </div>
+                </div>
+                <div class="example-content">
+                    <div class="example-stats">
+                        <div class="stat-item">
+                            <span class="stat-number">847</span>
+                            <span class="stat-label">Duplicates Removed</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">2,400</span>
+                            <span class="stat-label">Records Cleaned</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">98.7%</span>
+                            <span class="stat-label">Data Quality</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">2,156</span>
+                            <span class="stat-label">AI Categorized</span>
+                        </div>
+                    </div>
+
+                    <div class="comparison-tables">
+                        <div class="table-container">
+                            <div class="table-header">Before Cleaning</div>
+                            <table class="data-table">
+                                <tbody><tr>
+                                    <td class="messy">john smith</td>
+                                    <td class="messy">JOHN@ACME.COM</td>
+                                    <td class="messy">555.123.4567</td>
+                                </tr>
+                                <tr class="duplicate">
+                                    <td>J. Smith</td>
+                                    <td>john@acme.com</td>
+                                    <td>(555) 123-4567</td>
+                                </tr>
+                                <tr>
+                                    <td class="messy">sarah johnson</td>
+                                    <td class="messy">SARAH@TECHCO</td>
+                                    <td class="messy">555 987 6543</td>
+                                </tr>
+                                <tr class="duplicate">
+                                    <td>Sarah Johnson</td>
+                                    <td>s.johnson@techco.com</td>
+                                    <td>5559876543</td>
+                                </tr>
+                            </tbody></table>
+                        </div>
+                        <div class="table-container">
+                            <div class="table-header">After Cleaning</div>
+                            <table class="data-table">
+                                <tbody><tr>
+                                    <td class="clean">John Smith</td>
+                                    <td class="clean">john@acme.com</td>
+                                    <td class="clean">+1-555-123-4567</td>
+                                </tr>
+                                <tr>
+                                    <td class="clean">Sarah Johnson</td>
+                                    <td class="clean">sarah@techco.com</td>
+                                    <td class="clean">+1-555-987-6543</td>
+                                </tr>
+                            </tbody></table>
+                        </div>
+                    </div>
+
+                    <div class="report-preview">
+                        <h4>AI Categorization Results</h4>
+                        <div class="report-metrics">
+                            <div class="metric-item">
+                                <span class="metric-value">892</span>
+                                <span class="metric-label">Hot Leads</span>
+                            </div>
+                            <div class="metric-item">
+                                <span class="metric-value">456</span>
+                                <span class="metric-label">Warm Leads</span>
+                            </div>
+                            <div class="metric-item">
+                                <span class="metric-value">156</span>
+                                <span class="metric-label">Cold Leads</span>
+                            </div>
+                            <div class="metric-item">
+                                <span class="metric-value">64</span>
+                                <span class="metric-label">Customers</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Inventory Management Example -->
+            <div class="example-card" data-category="inventory">
+                <div class="example-header">
+                    <div class="example-title">Product Inventory Cleanup</div>
+                    <div class="example-meta">
+                        <span class="example-badge">Inventory</span>
+                        <span>4,156 rows processed</span>
+                        <span>36h turnaround</span>
+                    </div>
+                </div>
+                <div class="example-content">
+                    <div class="example-stats">
+                        <div class="stat-item">
+                            <span class="stat-number">1,234</span>
+                            <span class="stat-label">Duplicates</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">2,922</span>
+                            <span class="stat-label">Clean Records</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">96.8%</span>
+                            <span class="stat-label">Accuracy</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">12</span>
+                            <span class="stat-label">Categories</span>
+                        </div>
+                    </div>
+
+                    <div class="comparison-tables">
+                        <div class="table-container">
+                            <div class="table-header">Original Data</div>
+                            <table class="data-table">
+                                <tbody><tr>
+                                    <td class="messy">laptop computer</td>
+                                    <td class="messy">$999.99</td>
+                                    <td class="messy">electronics</td>
+                                </tr>
+                                <tr class="duplicate">
+                                    <td>Laptop Computer</td>
+                                    <td>999.99</td>
+                                    <td>Electronics</td>
+                                </tr>
+                                <tr>
+                                    <td class="messy">wireless mouse</td>
+                                    <td class="messy">29.95</td>
+                                    <td class="messy">computer acc</td>
+                                </tr>
+                                <tr>
+                                    <td class="messy">Office Chair</td>
+                                    <td class="messy">$199</td>
+                                    <td class="messy">furniture</td>
+                                </tr>
+                            </tbody></table>
+                        </div>
+                        <div class="table-container">
+                            <div class="table-header">Cleaned Data</div>
+                            <table class="data-table">
+                                <tbody><tr>
+                                    <td class="clean">Laptop Computer</td>
+                                    <td class="clean">$999.99</td>
+                                    <td class="clean">Electronics</td>
+                                </tr>
+                                <tr>
+                                    <td class="clean">Wireless Mouse</td>
+                                    <td class="clean">$29.95</td>
+                                    <td class="clean">Computer Accessories</td>
+                                </tr>
+                                <tr>
+                                    <td class="clean">Office Chair</td>
+                                    <td class="clean">$199.00</td>
+                                    <td class="clean">Office Furniture</td>
+                                </tr>
+                            </tbody></table>
+                        </div>
+                    </div>
+
+                    <div class="report-preview">
+                        <h4>Standardization Applied</h4>
+                        <ul style="color: var(--text-muted); font-size: 0.875rem; line-height: 1.6;">
+                            <li>Uniform product name capitalization</li>
+                            <li>Consistent pricing format ($XX.XX)</li>
+                            <li>Expanded category abbreviations</li>
+                            <li>Merged duplicate SKUs</li>
+                            <li>AI-categorized product types</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sales Leads Example -->
+            <div class="example-card" data-category="leads">
+                <div class="example-header">
+                    <div class="example-title">Sales Leads Optimization</div>
+                    <div class="example-meta">
+                        <span class="example-badge">Sales Leads</span>
+                        <span>1,892 rows processed</span>
+                        <span>18h turnaround</span>
+                    </div>
+                </div>
+                <div class="example-content">
+                    <div class="example-stats">
+                        <div class="stat-item">
+                            <span class="stat-number">324</span>
+                            <span class="stat-label">Duplicates Found</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">1,568</span>
+                            <span class="stat-label">Unique Leads</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">97.2%</span>
+                            <span class="stat-label">Quality Score</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">4</span>
+                            <span class="stat-label">Categories</span>
+                        </div>
+                    </div>
+
+                    <div class="report-preview">
+                        <h4>Lead Quality Improvements</h4>
+                        <ul style="color: var(--text-muted); font-size: 0.875rem; line-height: 1.6;">
+                            <li>Standardized company names and domains</li>
+                            <li>Normalized contact information</li>
+                            <li>Validated email addresses</li>
+                            <li>Categorized by lead temperature</li>
+                            <li>Removed invalid/bounce emails</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Financial Data Example -->
+            <div class="example-card" data-category="financial">
+                <div class="example-header">
+                    <div class="example-title">Financial Records Processing</div>
+                    <div class="example-meta">
+                        <span class="example-badge">Financial</span>
+                        <span>2,847 rows processed</span>
+                        <span>42h turnaround</span>
+                    </div>
+                </div>
+                <div class="example-content">
+                    <div class="example-stats">
+                        <div class="stat-item">
+                            <span class="stat-number">156</span>
+                            <span class="stat-label">Duplicates</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">2,691</span>
+                            <span class="stat-label">Valid Records</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">99.1%</span>
+                            <span class="stat-label">Accuracy</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">8</span>
+                            <span class="stat-label">Categories</span>
+                        </div>
+                    </div>
+
+                    <div class="report-preview">
+                        <h4>Financial Categories</h4>
+                        <div class="report-metrics">
+                            <div class="metric-item">
+                                <span class="metric-value">1,245</span>
+                                <span class="metric-label">Expenses</span>
+                            </div>
+                            <div class="metric-item">
+                                <span class="metric-value">892</span>
+                                <span class="metric-label">Revenue</span>
+                            </div>
+                            <div class="metric-item">
+                                <span class="metric-value">356</span>
+                                <span class="metric-label">Assets</span>
+                            </div>
+                            <div class="metric-item">
+                                <span class="metric-value">198</span>
+                                <span class="metric-label">Liabilities</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Demo -->
+    <section class="container">
+        <div class="interactive-demo">
+            <h3 style="text-align: center; margin-bottom: var(--spacing-lg); color: var(--dark-blue);">
+                Interactive Data Cleaning Demo
+            </h3>
+            <p style="text-align: center; margin-bottom: var(--spacing-lg); color: var(--text-muted);">
+                Click the buttons below to see how our cleaning algorithms work on sample data
+            </p>
+            
+            <div class="demo-controls">
+                <button class="demo-btn" onclick="showStep(&#39;original&#39;)">Show Original Data</button>
+                <button class="demo-btn" onclick="showStep(&#39;deduplication&#39;)">Apply Deduplication</button>
+                <button class="demo-btn" onclick="showStep(&#39;normalization&#39;)">Normalize Format</button>
+                <button class="demo-btn" onclick="showStep(&#39;categorization&#39;)">AI Categorization</button>
+                <button class="demo-btn" onclick="resetDemo()">Reset Demo</button>
+            </div>
+
+            <div class="table-container" id="demoTable">
+                <div class="table-header">Original Data</div>
+                <table class="data-table" id="demoTableContent"><tr><td class="messy">john smith</td><td class="messy">JOHN@ACME.COM</td><td class="messy">555.123.4567</td><td class="messy">-</td></tr><tr><td class="duplicate">J. Smith</td><td class="duplicate">john@acme.com</td><td class="duplicate">(555) 123-4567</td><td class="duplicate">-</td></tr><tr><td class="messy">sarah johnson</td><td class="messy">SARAH@TECHCO</td><td class="messy">555 987 6543</td><td class="messy">-</td></tr><tr><td class="messy">mike davis</td><td class="messy">mike.davis@corp.com</td><td class="messy">5551234567</td><td class="messy">-</td></tr></table>
+            </div>
+        </div>
+    </section>
+
+    <!-- Case Study -->
+    <section class="case-study">
+        <div class="container">
+            <div class="case-study-content">
+                <div class="case-study-text">
+                    <h2>Success Story: TechStart Inc</h2>
+                    <p>
+                        TechStart Inc came to us with a massive customer database containing 15,000+ records 
+                        with significant quality issues. Multiple data sources had been merged over time, 
+                        creating duplicate entries, inconsistent formatting, and missing categorizations.
+                    </p>
+                    <p>
+                        Our AI-powered cleaning process identified and resolved 3,200 duplicate records, 
+                        standardized contact information formats, and automatically categorized all 
+                        customers into actionable segments for their marketing team.
+                    </p>
+                    <a href="https://www.datacleanup.pro/examples/index.html#" onclick="window.open(&#39;techstart_case_study.html&#39;, &#39;_blank&#39;)" class="btn btn-primary">Read Full Case Study</a>
+                </div>
+                
+                <div class="case-study-results">
+                    <h4 style="text-align: center; margin-bottom: var(--spacing-lg); color: var(--dark-blue);">
+                        Results Achieved
+                    </h4>
+                    <div class="results-grid">
+                        <div class="result-item">
+                            <span class="result-number">3,200</span>
+                            <span class="result-label">Duplicates Removed</span>
+                        </div>
+                        <div class="result-item">
+                            <span class="result-number">98.7%</span>
+                            <span class="result-label">Data Quality Score</span>
+                        </div>
+                        <div class="result-item">
+                            <span class="result-number">11,800</span>
+                            <span class="result-label">Records Cleaned</span>
+                        </div>
+                        <div class="result-item">
+                            <span class="result-number">24h</span>
+                            <span class="result-label">Turnaround Time</span>
+                        </div>
+                    </div>
+                    
+                    <div style="margin-top: var(--spacing-lg); padding: var(--spacing-md); background: var(--bg-light); border-radius: var(--radius-md);">
+                        <p style="font-style: italic; color: var(--text-muted); text-align: center; margin: 0;">
+                            "DataCleanup Pro saved us weeks of manual work and improved our marketing 
+                            campaign effectiveness by 300%. The AI categorization was incredibly accurate."
+                        </p>
+                        <p style="text-align: center; margin-top: var(--spacing-sm); font-weight: 600; color: var(--dark-blue);">
+                            - Sarah Bennett, Operations Manager
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sample Reports -->
+    <section class="container" style="padding: var(--spacing-3xl) 0;">
+        <h2 style="text-align: center; font-size: 2.5rem; font-weight: 700; color: var(--dark-blue); margin-bottom: var(--spacing-2xl);">
+            Sample Reports
+        </h2>
+        
+        <div class="examples-grid">
+            <div class="example-card">
+                <div class="example-header">
+                    <div class="example-title">PDF Cleaning Report</div>
+                    <div class="example-meta">
+                        <span class="example-badge">Professional Report</span>
+                        <span>Executive Summary</span>
+                    </div>
+                </div>
+                <div class="example-content">
+                    <div style="background: var(--bg-light); padding: var(--spacing-lg); border-radius: var(--radius-md); margin-bottom: var(--spacing-lg);">
+                        <h4 style="color: var(--dark-blue); margin-bottom: var(--spacing-md);">Report Contents</h4>
+                        <ul style="color: var(--text-muted); line-height: 1.8;">
+                            <li>Executive summary with key metrics</li>
+                            <li>Before/after data quality comparison</li>
+                            <li>Detailed cleaning methodology</li>
+                            <li>Data visualization charts</li>
+                            <li>Recommendations for data maintenance</li>
+                        </ul>
+                    </div>
+                    <div style="text-align: center;">
+                        <a href="https://www.datacleanup.pro/examples/index.html#" onclick="window.open(&#39;sample_pdf_report.html&#39;, &#39;_blank&#39;)" class="btn btn-primary">Download Sample PDF</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="example-card">
+                <div class="example-header">
+                    <div class="example-title">JSON Summary Report</div>
+                    <div class="example-meta">
+                        <span class="example-badge">API Format</span>
+                        <span>Machine Readable</span>
+                    </div>
+                </div>
+                <div class="example-content">
+                    <div style="background: var(--dark-blue); color: white; padding: var(--spacing-md); border-radius: var(--radius-md); font-family: var(--font-mono); font-size: 0.75rem; margin-bottom: var(--spacing-lg);">
+                        <pre>{
+  "job_id": "job_abc123",
+  "original_rows": 5247,
+  "cleaned_rows": 4044,
+  "duplicates_removed": 1203,
+  "data_quality_score": 98.3,
+  "categorizations": {
+    "leads": 2156,
+    "customers": 1234,
+    "vendors": 654
+  },
+  "processing_time": "1h 23m"
+}</pre>
+                    </div>
+                    <div style="text-align: center;">
+                        <a href="https://www.datacleanup.pro/examples/index.html#" onclick="window.open(&#39;json_summary_report.html&#39;, &#39;_blank&#39;)" class="btn btn-primary">View Full JSON</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>Ready to Clean Your Data?</h2>
+            <p>Join hundreds of businesses who have improved their data quality with DataCleanup Pro</p>
+            <div style="display: flex; gap: var(--spacing-md); justify-content: center;">
+                <a href="https://www.datacleanup.pro/pricing" class="btn" style="background: var(--accent-gradient); color: var(--dark-blue);">Start Cleaning - $39</a>
+                <a href="https://www.datacleanup.pro/contact" class="btn" style="border: 2px solid rgba(255,255,255,0.3); color: white;">Contact Sales</a>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Filter functionality
+        function filterExamples(category) {
+            const cards = document.querySelectorAll('.example-card');
+            const tabs = document.querySelectorAll('.filter-tab');
+            
+            // Update active tab
+            tabs.forEach(tab => tab.classList.remove('active'));
+            event.target.classList.add('active');
+            
+            // Filter cards
+            cards.forEach(card => {
+                if (category === 'all' || card.dataset.category === category) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+
+        // Interactive demo functionality
+        const demoData = {
+            original: {
+                header: "Original Data",
+                rows: [
+                    ['john smith', 'JOHN@ACME.COM', '555.123.4567', '-'],
+                    ['J. Smith', 'john@acme.com', '(555) 123-4567', '-'],
+                    ['sarah johnson', 'SARAH@TECHCO', '555 987 6543', '-'],
+                    ['mike davis', 'mike.davis@corp.com', '5551234567', '-']
+                ],
+                classes: ['messy', 'duplicate', 'messy', 'messy']
+            },
+            deduplication: {
+                header: "After Deduplication",
+                rows: [
+                    ['john smith', 'JOHN@ACME.COM', '555.123.4567', '-'],
+                    ['sarah johnson', 'SARAH@TECHCO', '555 987 6543', '-'],
+                    ['mike davis', 'mike.davis@corp.com', '5551234567', '-']
+                ],
+                classes: ['clean', 'clean', 'clean']
+            },
+            normalization: {
+                header: "After Normalization",
+                rows: [
+                    ['John Smith', 'john@acme.com', '+1-555-123-4567', '-'],
+                    ['Sarah Johnson', 'sarah@techco.com', '+1-555-987-6543', '-'],
+                    ['Mike Davis', 'mike.davis@corp.com', '+1-555-123-4567', '-']
+                ],
+                classes: ['clean', 'clean', 'clean']
+            },
+            categorization: {
+                header: "After AI Categorization",
+                rows: [
+                    ['John Smith', 'john@acme.com', '+1-555-123-4567', 'Customer'],
+                    ['Sarah Johnson', 'sarah@techco.com', '+1-555-987-6543', 'Lead'],
+                    ['Mike Davis', 'mike.davis@corp.com', '+1-555-123-4567', 'Lead']
+                ],
+                classes: ['clean', 'clean', 'clean']
+            }
+        };
+
+        function showStep(step) {
+            const data = demoData[step];
+            const tableHeader = document.querySelector('#demoTable .table-header');
+            const tableContent = document.getElementById('demoTableContent');
+            
+            tableHeader.textContent = data.header;
+            tableContent.innerHTML = '';
+            
+            data.rows.forEach((row, index) => {
+                const tr = document.createElement('tr');
+                row.forEach(cell => {
+                    const td = document.createElement('td');
+                    td.textContent = cell;
+                    if (data.classes && data.classes[index]) {
+                        td.className = data.classes[index];
+                    }
+                    tr.appendChild(td);
+                });
+                tableContent.appendChild(tr);
+            });
+        }
+
+        function resetDemo() {
+            showStep('original');
+        }
+
+        // Initialize demo
+        showStep('original');
+    </script>
+
+
+</body></html>
